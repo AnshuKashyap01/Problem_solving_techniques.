@@ -19,7 +19,8 @@ public:
 
         }
 
-        ans.push_back(intervals.back());
+        ans.push_back(intervals.back());//since last element will not be added
+        
 
         return ans;
     }
