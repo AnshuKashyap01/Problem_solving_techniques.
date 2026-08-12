@@ -8,13 +8,8 @@ public:
 
         while(j<nums.size()){
             mpp[nums[j]]++;
-            if(mpp[nums[j]]<k){
-                maxx= max(maxx,j-i+1);
-                j++;
-            }
-            else if(mpp[nums[j]]==k){
-                maxx= max(maxx,j-i+1);
-                j++;
+            if(mpp[nums[j]]<=k){
+                
             }
             else{
                 while(mpp[nums[j]]>k){
@@ -24,8 +19,9 @@ public:
                     }
                     i++;
                 }
-                 j++;
             }
+            maxx= max(maxx,j-i+1);
+            j++;
 
         }
 
